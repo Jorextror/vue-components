@@ -1,13 +1,10 @@
 <template>
-    <main id="app">
-    
-        <button class="sparkles">
+    <div class="flex flex-col gap-16 items-center ">
+        <button ref="btn" class="sparkles" :style="{ '--clr': selectedColor }">
             <span>Sparkly Button</span>
         </button>
-
-    </main>
-
-    <input type="range" min=0 max=360>
+        <input type="range" min=0 max=360 v-model="selectedColor">
+    </div>
 </template>
 
 <script setup>
@@ -17,10 +14,12 @@ import { ref, onMounted } from 'vue';
 defineProps({
     color: {
       type: String,
-      default: '#ff0000',
+      default: '#ff000s0',
     }
   });
-// const color = ref('#ff000s0');
+
+const selectedColor = ref(260);
+const color = ref(null);
 
 // Referencia al botón
 const btn = ref(null);

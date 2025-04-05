@@ -2,7 +2,7 @@
     <div class="container">
         <!-- Input para seleccionar el color -->
         <div class="color-picker">
-            <label for="color">Selecciona un color:</label>
+            <label for="color">Color:</label>
             <input type="color" id="color" v-model="buttonColor" />
         </div>
       <!-- Menú de selección -->
