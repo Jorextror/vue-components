@@ -1,5 +1,8 @@
 <template>
-    <button class="button-55"> <slot></slot> </button>
+    <button class="button-55"
+    :style="{ backgroundColor: color }"> 
+        <slot></slot> 
+    </button>
 </template>
 
 <style scoped>
@@ -43,3 +46,11 @@
     box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
     }
 </style>
+
+<script setup>
+    defineProps({
+    color: {
+      type: String,
+    }
+  });
+</script>

@@ -1,14 +1,17 @@
 <template>
     <body ontouchstart="">
-        <button class="glass">
+        <button class="glass"
+		:style="{ backgroundColor: color }">
             <span class="text">Glass Button</span>
         </button>
 
-        <button class="flannel">
+        <button class="flannel"
+		:style="{ backgroundColor: color }">
             <span class="text">Flannel Button</span>
         </button>
 
-        <button class="metal">
+        <button class="metal"
+		:style="computedStyle">
             <span class="text">Metal Button</span>
         </button>
     </body>
@@ -121,7 +124,7 @@ template, body {
 	 text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
 	 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.75), inset 0 0 1px 1px gray;
 	 position: relative;
-	 background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4) 90px), repeating-linear-gradient(45deg, rgba(147, 147, 147, 0.3), rgba(147, 147, 147, 0.3) 1.5px, transparent 1.5px, transparent 3px), linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7) 60px), radial-gradient(circle at center, #3f87a6, #ebf8e1, darkgray);
+	 /* background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4) 90px), repeating-linear-gradient(45deg, rgba(147, 147, 147, 0.3), rgba(147, 147, 147, 0.3) 1.5px, transparent 1.5px, transparent 3px), linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7) 60px), radial-gradient(circle at center, #3f87a6, #ebf8e1, darkgray); */
 }
  body button.metal:before, body button.metal:after {
 	 content: '';
@@ -158,3 +161,28 @@ template, body {
 }
  
 </style>
+
+
+<script setup>
+	import { computed } from "vue"; 
+
+	const props = defineProps({
+		color: {
+			type: String,
+		}
+  	});
+
+  	const computedStyle = computed(() => {
+	const backgroundColor = props.color || "#3f87a6"; // Usamos el color pasado o el predeterminado
+	return {
+		backgroundImage: `
+		linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4) 90px),
+		repeating-linear-gradient(45deg, rgba(147, 147, 147, 0.3), rgba(147, 147, 147, 0.3) 1.5px, transparent 1.5px, transparent 3px),
+		linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7) 60px),
+		radial-gradient(circle at center, ${backgroundColor}, #ebf8e1, darkgray)
+		`
+	};
+	});
+
+
+</script>

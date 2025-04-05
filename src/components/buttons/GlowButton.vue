@@ -11,6 +11,9 @@ const props = defineProps({
     type: Boolean,
     default: false, // Valor por defecto para evitar que sea undefined
   },
+    color: {
+      type: String,
+    }
 });
 
 // Crear una referencia para el botón
@@ -42,6 +45,7 @@ onMounted(() => {
     ]"
     @mouseenter="hovering = true"
     @mouseleave="hovering = false"
+    :style="{ backgroundColor: color }"
   >
     <span
       v-if="hovering"
