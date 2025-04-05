@@ -2,7 +2,7 @@
     <button
       @click="animateRipple($event)"
       class="relative px-6 py-3 bg-blue-600 text-white font-semibold rounded-md overflow-hidden transition-transform duration-300 hover:scale-105"
-      :style="{ backgroundColor: color }"
+      :style="{ backgroundColor: backgroundColor }"
     >
       Click Me
       <span
@@ -17,10 +17,15 @@
   import { ref } from 'vue';
 
   defineProps({
-    color: {
-      type: String,
-    }
-  });
+      textColor: { type: String },
+      backgroundColor: { type: String },
+      hoverBackgroundColor: { type: String },
+      activeBackgroundColor: { type: String },
+      borderColor: { type: String},
+      hoverBorderColor: { type: String },
+      activeBorderColor: { type: String },
+      shadowColor: { type: String }
+	  });
   
   const ripple = ref(null);
   

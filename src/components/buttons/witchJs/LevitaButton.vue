@@ -1,6 +1,6 @@
 <template>
     <button class="button-55"
-    :style="{ backgroundColor: color }"> 
+    :style="{ backgroundColor: backgroundColor }"> 
         <slot></slot> 
     </button>
 </template>
@@ -49,8 +49,13 @@
 
 <script setup>
     defineProps({
-    color: {
-      type: String,
-    }
-  });
+      textColor: { type: String },
+      backgroundColor: { type: String },
+      hoverBackgroundColor: { type: String },
+      activeBackgroundColor: { type: String },
+      borderColor: { type: String},
+      hoverBorderColor: { type: String },
+      activeBorderColor: { type: String },
+      shadowColor: { type: String }
+	  });
 </script>

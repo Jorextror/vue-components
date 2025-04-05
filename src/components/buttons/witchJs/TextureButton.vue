@@ -1,12 +1,12 @@
 <template>
     <body ontouchstart="">
         <button class="glass"
-		:style="{ backgroundColor: color }">
+		:style="{ backgroundColor: backgroundColor }">
             <span class="text">Glass Button</span>
         </button>
 
         <button class="flannel"
-		:style="{ backgroundColor: color }">
+		:style="{ backgroundColor: backgroundColor }">
             <span class="text">Flannel Button</span>
         </button>
 
@@ -167,13 +167,18 @@ template, body {
 	import { computed } from "vue"; 
 
 	const props = defineProps({
-		color: {
-			type: String,
-		}
-  	});
+		textColor: { type: String },
+		backgroundColor: { type: String },
+		hoverBackgroundColor: { type: String },
+		activeBackgroundColor: { type: String },
+		borderColor: { type: String},
+		hoverBorderColor: { type: String },
+		activeBorderColor: { type: String },
+		shadowColor: { type: String }
+	});
 
   	const computedStyle = computed(() => {
-	const backgroundColor = props.color || "#3f87a6"; // Usamos el color pasado o el predeterminado
+	const backgroundColor = props.backgroundColor || "#3f87a6"; // Usamos el color pasado o el predeterminado
 	return {
 		backgroundImage: `
 		linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4) 90px),

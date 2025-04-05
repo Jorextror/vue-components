@@ -12,11 +12,15 @@ import { ref, onMounted } from 'vue';
 
 // Estado para el color seleccionado
 defineProps({
-    color: {
-      type: String,
-      default: '#ff000s0',
-    }
-  });
+      textColor: { type: String },
+      backgroundColor: { type: String },
+      hoverBackgroundColor: { type: String },
+      activeBackgroundColor: { type: String },
+      borderColor: { type: String},
+      hoverBorderColor: { type: String },
+      activeBorderColor: { type: String },
+      shadowColor: { type: String }
+	});
 
 const selectedColor = ref(260);
 const color = ref(null);

@@ -16,9 +16,14 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-  color: {
-    type: String,
-  }
+  textColor: { type: String },
+  backgroundColor: { type: String },
+  hoverBackgroundColor: { type: String },
+  activeBackgroundColor: { type: String },
+  borderColor: { type: String},
+  hoverBorderColor: { type: String },
+  activeBorderColor: { type: String },
+  shadowColor: { type: String }
 })
 
 const updateMousePosition = (event) => {
@@ -59,7 +64,7 @@ const spotlight2Style = computed(() => ({
     @mouseenter="hovering = true"
     @mouseleave="hovering = false"
     @mousemove="updateMousePosition"
-    :style="{ backgroundColor: color }"
+    :style="{ backgroundColor: backgroundColor }"
   >
     <span
       v-if="hovering"
