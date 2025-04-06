@@ -50,7 +50,7 @@ onMounted(() => {
     ]"
     @mouseenter="hovering = true"
     @mouseleave="hovering = false"
-    :style="{ backgroundColor: backgroundColor }"
+    :style="{ backgroundColor: backgroundColor, color: textColor, hoverBackgroundColor: hoverBackgroundColor, activeBackgroundColor: activeBackgroundColor }"
   >
     <span
       v-if="hovering"

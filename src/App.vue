@@ -2,8 +2,7 @@
 import firtsNavVue from "./components/nav/firts-nav.vue";
 import { ref, watch } from "vue";
 
-// Estado reactivo para el color de fondo
-const backgroundColor = ref("#ffffff"); // Color inicial (blanco)
+const backgroundColor = ref("#ffffff");
 
 // Actualizar el color de fondo del body
 watch(backgroundColor, (newColor) => {
@@ -17,7 +16,7 @@ watch(backgroundColor, (newColor) => {
 
   <!-- Botón para cambiar el color del fondo -->
   <div class="color-picker">
-    <input type="color" v-model="backgroundColor" />
+    <input class="cursor-pointer hover:bg-blue-300 " type="color" v-model="backgroundColor" />
   </div>
 
   <!-- Contenido principal -->

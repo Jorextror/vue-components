@@ -28,7 +28,7 @@
       <div v-show="activeMenu === 'normal'" class="">
         <DeslizarButton
           :text-color="textColor"
-          :background-color="backgroundColor"
+          :backgroundColor="backgroundColor"
           :hover-background-color="hoverBackgroundColor"
           :active-background-color="activeBackgroundColor"
         >

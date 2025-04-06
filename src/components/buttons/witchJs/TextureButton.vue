@@ -1,12 +1,12 @@
 <template>
     <body ontouchstart="">
         <button class="glass"
-		:style="{ backgroundColor: backgroundColor }">
+		:style="{ backgroundColor: backgroundColor, color: textColor, hoverBackgroundColor: hoverBackgroundColor, activeBackgroundColor: activeBackgroundColor }">
             <span class="text">Glass Button</span>
         </button>
 
         <button class="flannel"
-		:style="{ backgroundColor: backgroundColor }">
+		:style="{ backgroundColor: backgroundColor, color: textColor, hoverBackgroundColor: hoverBackgroundColor, activeBackgroundColor: activeBackgroundColor }">
             <span class="text">Flannel Button</span>
         </button>
 

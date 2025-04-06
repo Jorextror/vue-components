@@ -64,7 +64,7 @@ const spotlight2Style = computed(() => ({
     @mouseenter="hovering = true"
     @mouseleave="hovering = false"
     @mousemove="updateMousePosition"
-    :style="{ backgroundColor: backgroundColor }"
+    :style="{ backgroundColor: backgroundColor, color: textColor, hoverBackgroundColor: hoverBackgroundColor, activeBackgroundColor: activeBackgroundColor }"
   >
     <span
       v-if="hovering"

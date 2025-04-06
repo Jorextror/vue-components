@@ -1,6 +1,6 @@
 <template>
     <button class="button-55"
-    :style="{ backgroundColor: backgroundColor }"> 
+    :style="{ backgroundColor: backgroundColor, color: textColor, hoverBackgroundColor: hoverBackgroundColor, activeBackgroundColor: activeBackgroundColor }"> 
         <slot></slot> 
     </button>
 </template>
