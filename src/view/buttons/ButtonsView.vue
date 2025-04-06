@@ -3,32 +3,45 @@
       <!-- Inputs para seleccionar colores -->
       <div class="flex flex-row gap-4 align-center justify-center ">
         <label class="cursor-pointer" for="textColor">Text:</label>
-        <input class="w-10 mt-7 cursor-pointer hover:bg-blue-300 " type="color" id="textColor" v-model="textColor" />
+        <input class="w-10 mt-7 cursor-pointer hover:bg-blue-300 border-r-2 border-black " type="color" id="textColor" v-model="textColor" />
   
         <label class="cursor-pointer" for="backgroundColor">Background:</label>
-        <input class="w-10 mt-7 cursor-pointer hover:bg-blue-300" type="color" id="backgroundColor" v-model="backgroundColor" />
+        <input class="w-10 mt-7 cursor-pointer hover:bg-blue-300 border-r-2 border-black" type="color" id="backgroundColor" v-model="backgroundColor" />
+
+        <label class="cursor-pointer" for="backgroundColor2">Background2:</label>
+        <input class="w-10 mt-7 cursor-pointer hover:bg-blue-300 border-r-2 border-black" type="color" id="backgroundColor2" v-model="backgroundColor2" />
   
         <label class="cursor-pointer" for="hoverBackgroundColor">Hover:</label>
-        <input class="w-10 mt-7 cursor-pointer hover:bg-blue-300" type="color" id="hoverBackgroundColor" v-model="hoverBackgroundColor" />
+        <input class="w-10 mt-7 cursor-pointer hover:bg-blue-300 border-r-2 border-black" type="color" id="hoverBackgroundColor" v-model="hoverBackgroundColor" />
   
         <label class="cursor-pointer" for="activeBackgroundColor">Active:</label>
-        <input class="w-10 mt-7 cursor-pointer hover:bg-blue-300" type="color" id="activeBackgroundColor" v-model="activeBackgroundColor" />
+        <input class="w-10 mt-7 cursor-pointer hover:bg-blue-300 border-r-2 border-black" type="color" id="activeBackgroundColor" v-model="activeBackgroundColor" />
 
-        <button class="bg-blue-500 text-white px-2 rounded h-7 hover:bg-blue-600" @click="resetColors">Resetear Colores</button>
+        <button class="bg-blue-500 text-white px-2 rounded h-7 hover:bg-blue-600 active:bg-blue-700 " @click="resetColors">Resetear Colores</button>
       </div>
   
       <!-- Menú de selección -->
       <div class="menu">
-        <button @click="showNormalButtons">Normales</button>
-        <button @click="showJsButtons">Con JS</button>
-        <button @click="showDementesButtons">Dementes</button>
+        <BaseButton @click="showNormalButtons">Normales</BaseButton>
+        <BaseButton @click="showJsButtons">Con JS</BaseButton>
+        <BaseButton @click="showDementesButtons">Dementes</BaseButton>
       </div>
   
       <!-- Botones normales -->
       <div v-show="activeMenu === 'normal'" class="">
+        <BaseButton 
+          textColor="#ffffff"
+          backgroundColor="#007BFF"
+          hoverBackgroundColor="#0056b3"
+          activeBackgroundColor="#003e8e"
+        >
+          Botón Base
+        </BaseButton>
+
         <DeslizarButton
           :text-color="textColor"
           :backgroundColor="backgroundColor"
+          :backgroundColor2="backgroundColor2"
           :hover-background-color="hoverBackgroundColor"
           :active-background-color="activeBackgroundColor"
         >
@@ -96,6 +109,7 @@
   
   <script setup>
   // Importamos los componentes de botones con efectos JS
+  import BaseButton from "../../components/buttons/BaseButton.vue";
   import GlowButton from "../../components/buttons/witchJs/GlowButton.vue";
   import SpotlightButton from "../../components/buttons/witchJs/SpotlightButton.vue";
   import ClikOndaButton from "../../components/buttons/witchJs/ClikOndaButton.vue";
@@ -112,6 +126,7 @@
   // Colores reactivos para los botones
   const textColor = ref();
   const backgroundColor = ref();
+  const backgroundColor2 = ref();
   const hoverBackgroundColor = ref();
   const activeBackgroundColor = ref();
   
@@ -131,6 +146,7 @@
   const resetColors = () => {
         textColor.value = null;
         backgroundColor.value = null;
+        backgroundColor2.value = null;
         hoverBackgroundColor.value = null;
         activeBackgroundColor.value = null;
     };
