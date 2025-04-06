@@ -45,6 +45,8 @@
           hoverBorderColor="#0056b3"
 
           shadowColor="rgba(0, 0, 0, 0.25)"
+
+          @click="handleClick"
         >
           Botón Base
         </BaseButton>

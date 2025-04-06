@@ -7,6 +7,8 @@
         boxShadow: `0px 4px 8px ${shadowColor}`,
         backgroundImage: `linear-gradient(to right, ${currentBackground}, ${currentBackground2}, ${currentBackground})`,
       }"
+      :disabled="disabled"
+        @click="handleClick"
     >
         <slot></slot>
     </h2>

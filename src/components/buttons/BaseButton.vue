@@ -11,6 +11,8 @@
     @mouseout="resetStyles"
     @mousedown="applyActiveStyles"
     @mouseup="resetStyles"
+    :disabled="disabled"
+    @click="handleClick"
   >
     <span
       class="absolute inset-0 transition-transform duration-300 transform translate-x-full group-hover:translate-x-0"
@@ -41,6 +43,8 @@ const props = defineProps({
   hoverBorderColor: { type: String, default: "#45a049" }, // Color del borde al pasar el cursor
 
   shadowColor: { type: String, default: "rgba(76, 175, 80, 0.5)" }, // Color de la sombra
+
+  disabled: Boolean,
 });
 
 // Estado reactivo para manejar estilos dinámicos
@@ -67,6 +71,17 @@ const resetStyles = () => {
   currentBackground2.value = props.backgroundColor2;
   currentBorderColor.value = props.borderColor;
 };
+
+const emit = defineEmits(['click']);
+
+const handleClick = (event) => {
+  if (!props.disabled) {
+    if (props.onClick) {
+      props.onClick(event);
+    }
+    emit('click', event);
+  }
+};
 </script>
 
 <style scoped>
@@ -75,5 +90,14 @@ button {
 }
 .group:hover .group-hover\:translate-x-0 {
   transform: translateX(0); /* Efecto de desplazamiento */
+}
+
+.button:disabled {
+  background-color: #A0A0A0;
+  cursor: not-allowed;
+}
+
+.button:hover:not(:disabled) {
+  background-color: #3E7C94;
 }
 </style>
