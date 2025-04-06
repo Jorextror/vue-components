@@ -43,8 +43,8 @@
 
           borderColor="#007BFF"
           hoverBorderColor="#0056b3"
-          
-          shadowColor="rgba(0, 123, 255, 0.5)"
+
+          shadowColor="rgba(0, 0, 0, 0.25)"
         >
           Botón Base
         </BaseButton>

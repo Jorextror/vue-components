@@ -4,6 +4,7 @@ import Buttons from '../view/ButtonsView.vue';
 import Checkboxes from '../view/CheckBoxesView.vue';
 import TooltipView from '../view/TooltipView.vue';
 import CardsView from '../view/CardsView.vue';
+import BadgesView from '../view/BadgesView.vue';
 
 const routes = [
   { path: '/', name: 'Dasboard', component: Dasboard },
@@ -11,6 +12,7 @@ const routes = [
   { path: '/checkboxes', name: 'Checkboxes', component: Checkboxes },
   { path: '/tooltip', name: 'Tooltip', component: TooltipView },
   { path: '/cards', name: 'Cards', component: CardsView },
+  { path: '/badges', name: 'Badge', component: BadgesView },
 ];
 
 const router = createRouter({
