@@ -1,3 +1,8 @@
+<!-- 
+ https://uiverse.io/elements
+ https://codepen.io/trending
+ https://sarthology.github.io/Animatopy/
+-->
 <script setup>
 import firtsNavVue from "./components/nav/firts-nav.vue";
 import { ref, watch } from "vue";
