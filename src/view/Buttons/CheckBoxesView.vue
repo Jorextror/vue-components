@@ -7,5 +7,5 @@
 </template>
 
 <script setup >
-    import BaseCheckbox from '../components/checkbox/BaseCheckbox.vue';
+    import BaseCheckbox from '../../components/checkbox/BaseCheckbox.vue';
 </script>

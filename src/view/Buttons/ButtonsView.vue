@@ -122,14 +122,14 @@
   
   <script setup>
   // Importamos los componentes de botones con efectos JS
-  import BaseButton from "../components/buttons/BaseButton.vue";
-  import GlowButton from "../components/buttons/witchJs/GlowButton.vue";
-  import SpotlightButton from "../components/buttons/witchJs/SpotlightButton.vue";
-  import ClikOndaButton from "../components/buttons/witchJs/ClikOndaButton.vue";
-  import DeslizarButton from "../components/buttons/normals/DeslizarButton.vue";
-  import LevitaButton from "../components/buttons/witchJs/LevitaButton.vue";
-  import TextureButton from "../components/buttons/witchJs/TextureButton.vue";
-  import SparklyButton from "../components/buttons/dementes/SparklyButton.vue";
+  import BaseButton from "../../components/buttons/BaseButton.vue";
+  import GlowButton from "../../components/buttons/witchJs/GlowButton.vue";
+  import SpotlightButton from "../../components/buttons/witchJs/SpotlightButton.vue";
+  import ClikOndaButton from "../../components/buttons/witchJs/ClikOndaButton.vue";
+  import DeslizarButton from "../../components/buttons/normals/DeslizarButton.vue";
+  import LevitaButton from "../../components/buttons/witchJs/LevitaButton.vue";
+  import TextureButton from "../../components/buttons/witchJs/TextureButton.vue";
+  import SparklyButton from "../../components/buttons/dementes/SparklyButton.vue";
   
   // Estado reactivo para controlar el menú activo y los colores seleccionados
   import { ref } from "vue";

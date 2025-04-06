@@ -13,8 +13,8 @@
   
   <script setup>
   import { ref } from 'vue'
-  import BaseCarousel from '../components/carousels/BaseCarousel.vue';
-  import PlaylsitCarousel from '../components/carousels/PlaylsitCarousel.vue';
+  import BaseCarousel from '../../components/carousels/BaseCarousel.vue';
+  import PlaylsitCarousel from '../../components/carousels/PlaylsitCarousel.vue';
   
   const slides = ref([
     { image: '/img1.jpg', alt: 'Descripción 1' },

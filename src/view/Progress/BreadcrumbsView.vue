@@ -1,0 +1,3 @@
+<template>
+    Breadcrumbs
+</template>

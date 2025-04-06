@@ -21,5 +21,5 @@
 </template>
 
 <script setup >
-    import BaseBadge from '../components/Badges/BaseBadge.vue';
+    import BaseBadge from '../../components/Badges/BaseBadge.vue';
 </script>
