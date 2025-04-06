@@ -8,7 +8,7 @@
   </template>
   
   <script setup>
-    import Tooltip from "../../components/tooltip/BaseTooltip.vue";
+    import Tooltip from "../components/tooltip/BaseTooltip.vue";
 
   </script>
   

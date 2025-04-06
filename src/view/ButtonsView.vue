@@ -31,9 +31,20 @@
       <div v-show="activeMenu === 'normal'" class="">
         <BaseButton 
           textColor="#ffffff"
+
           backgroundColor="#007BFF"
+          backgroundColor2="#007BFF"
+
           hoverBackgroundColor="#0056b3"
+          hoverBackgroundColor2="#0056b3"
+          
           activeBackgroundColor="#003e8e"
+          activeBackgroundColor2="#003e8e"
+
+          borderColor="#007BFF"
+          hoverBorderColor="#0056b3"
+          
+          shadowColor="rgba(0, 123, 255, 0.5)"
         >
           Botón Base
         </BaseButton>
@@ -109,14 +120,14 @@
   
   <script setup>
   // Importamos los componentes de botones con efectos JS
-  import BaseButton from "../../components/buttons/BaseButton.vue";
-  import GlowButton from "../../components/buttons/witchJs/GlowButton.vue";
-  import SpotlightButton from "../../components/buttons/witchJs/SpotlightButton.vue";
-  import ClikOndaButton from "../../components/buttons/witchJs/ClikOndaButton.vue";
-  import DeslizarButton from "../../components/buttons/normals/DeslizarButton.vue";
-  import LevitaButton from "../../components/buttons/witchJs/LevitaButton.vue";
-  import TextureButton from "../../components/buttons/witchJs/TextureButton.vue";
-  import SparklyButton from "../../components/buttons/dementes/SparklyButton.vue";
+  import BaseButton from "../components/buttons/BaseButton.vue";
+  import GlowButton from "../components/buttons/witchJs/GlowButton.vue";
+  import SpotlightButton from "../components/buttons/witchJs/SpotlightButton.vue";
+  import ClikOndaButton from "../components/buttons/witchJs/ClikOndaButton.vue";
+  import DeslizarButton from "../components/buttons/normals/DeslizarButton.vue";
+  import LevitaButton from "../components/buttons/witchJs/LevitaButton.vue";
+  import TextureButton from "../components/buttons/witchJs/TextureButton.vue";
+  import SparklyButton from "../components/buttons/dementes/SparklyButton.vue";
   
   // Estado reactivo para controlar el menú activo y los colores seleccionados
   import { ref } from "vue";
